@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ganesh Deshmukh — Creative Video Editor</title>
-    <meta name="description" content="Portfolio of Ganesh Deshmukh — Creative Video Editor & Motion Graphics Artist. Reels, Shorts, TikToks & Long-Form content.">
+    <meta name="description"
+        content="Portfolio of Ganesh Deshmukh — Creative Video Editor & Motion Graphics Artist. Reels, Shorts, TikToks & Long-Form content.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- ==================== NAVIGATION ==================== -->
@@ -18,13 +23,14 @@
             <a href="#hero" class="navbar__logo">Ganesh<span class="navbar__logo-dot">.</span></a>
             <ul class="navbar__links" id="nav-links">
                 <li><a href="#shorts" class="navbar__link" data-section="shorts">Shorts</a></li>
-                <li><a href="#longform" class="navbar__link" data-section="longform">Long-Form</a></li>
+                <!-- <li><a href="#longform" class="navbar__link" data-section="longform">Long-Form</a></li> -->
                 <li><a href="#testimonials" class="navbar__link" data-section="testimonials">Testimonials</a></li>
                 <li><a href="#contact" class="navbar__link" data-section="contact">Contact</a></li>
             </ul>
             <div class="navbar__actions">
                 <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
-                    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="12" cy="12" r="5"></circle>
                         <line x1="12" y1="1" x2="12" y2="3"></line>
                         <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -35,7 +41,8 @@
                         <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
                         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
                     </svg>
-                    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
                     </svg>
                 </button>
@@ -57,12 +64,52 @@
     <!-- ==================== HERO ==================== -->
     <section class="hero section" id="hero">
         <div class="container">
-            <div class="hero__photo-wrap reveal" data-parallax data-speed="0.15">
-                <img src="assets/profile.png" alt="Ganesh Deshmukh" class="hero__photo">
+            <!-- Interactive Post/Form Feature -->
+            <div class="ui-post-box reveal" data-parallax data-speed="0.08">
+                <div class="ui-post-box__header">
+                    <img src="assets/GANESH LOGO.png" alt="Ganesh Deshmukh" class="ui-post-box__avatar">
+                    <div class="ui-post-box__info">
+                        <div class="ui-post-box__name-wrap">
+                            <span class="ui-post-box__name">Ganesh Deshmukh</span>
+                            <svg class="ui-post-box__badge" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="ui-post-box__handle">Senior Video Editor - @The Filming Company</span>
+                    </div>
+                </div>
+
+                <h1 class="hero__heading">
+                    Hey, I'm <strong>Ganesh</strong> — Motion Graphics &amp; Video Editor. Check out my work
+                    below ⤵
+                </h1>
+
+                <form id="comment-form" class="ui-post-box__form">
+                    <div class="ui-post-box__reply-avatar ui-post-box__reply-avatar--generic">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                        </svg>
+                    </div>
+                    <div class="ui-post-box__input-wrap">
+                        <input type="text" id="comment-input" class="ui-post-box__input"
+                            placeholder="Search, submit a form, or post a comment..." required>
+                        <button type="submit" class="ui-post-box__submit" aria-label="Submit">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+                    </div>
+                </form>
+
+                <div id="comments-container" class="ui-post-box__comments">
+                    <!-- Dynamic comments will be prepended here -->
+                </div>
             </div>
-            <h1 class="hero__heading reveal reveal--delay-1" data-parallax data-speed="0.08">
-                Hey, I'm <strong>Ganesh</strong> — Creative Video Editor &amp; Motion Graphics Artist. Check out my work below ⤵
-            </h1>
         </div>
     </section>
 
@@ -75,39 +122,51 @@
             <div class="video-grid video-grid--shorts reveal reveal--delay-1">
                 <div class="video-card video-card--vertical">
                     <div class="video-embed video-embed--vertical">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 1" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="video-card video-card--vertical">
                     <div class="video-embed video-embed--vertical">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 2" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="video-card video-card--vertical">
                     <div class="video-embed video-embed--vertical">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 3" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 3" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="video-card video-card--vertical">
                     <div class="video-embed video-embed--vertical">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 4" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="video-card video-card--vertical">
                     <div class="video-embed video-embed--vertical">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 5" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 5" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
                 <div class="video-card video-card--vertical">
                     <div class="video-embed video-embed--vertical">
-                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 6" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Short Sample 6" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== LONG-FORM SAMPLES ==================== -->
+    <!-- ==================== LONG-FORM SAMPLES (Temporarily Removed) ====================
     <section class="section" id="longform">
         <div class="container">
             <h2 class="section__title reveal" data-parallax data-speed="0.05">Long-Form Samples</h2>
@@ -137,6 +196,7 @@
             </div>
         </div>
     </section>
+    ============================================================================= -->
 
     <!-- ==================== TESTIMONIALS ==================== -->
     <section class="section" id="testimonials">
@@ -154,7 +214,8 @@
                         <span class="divider-dot">|</span>
                         <span class="date">Jan 10, 2025 - Jan 25, 2025</span>
                     </div>
-                    <p class="testimonial-card__quote">"Ganesh was incredible at video editing. He went above and beyond to complete the project. Honest freelancer too. Thank you!"</p>
+                    <p class="testimonial-card__quote">"Ganesh was incredible at video editing. He went above and beyond
+                        to complete the project. Honest freelancer too. Thank you!"</p>
                     <div class="testimonial-card__footer">
                         <span class="price">$350.00</span>
                         <span class="type">Fixed price</span>
@@ -170,7 +231,8 @@
                         <span class="divider-dot">|</span>
                         <span class="date">Feb 1, 2025 - Feb 10, 2025</span>
                     </div>
-                    <p class="testimonial-card__quote">"It was great working with Ganesh! Highly recommend! Fast delivery and amazing quality."</p>
+                    <p class="testimonial-card__quote">"It was great working with Ganesh! Highly recommend! Fast
+                        delivery and amazing quality."</p>
                 </div>
 
                 <!-- Testimonial 3 -->
@@ -182,7 +244,8 @@
                         <span class="divider-dot">|</span>
                         <span class="date">Dec 5, 2024 - Dec 15, 2024</span>
                     </div>
-                    <p class="testimonial-card__quote">"Ganesh was a great editor, quickly finished the requirement and made adjustments as necessary. Will hire again!"</p>
+                    <p class="testimonial-card__quote">"Ganesh was a great editor, quickly finished the requirement and
+                        made adjustments as necessary. Will hire again!"</p>
                 </div>
 
                 <!-- Testimonial 4 — Fiverr style -->
@@ -200,7 +263,8 @@
                         <span class="divider-dot">·</span>
                         <span class="date">2 months ago</span>
                     </div>
-                    <p class="testimonial-card__quote">"Thank you! Thank you! Thank you! Ganesh is simply amazing. I got more than I could have ever asked for. Again, thank you!"</p>
+                    <p class="testimonial-card__quote">"Thank you! Thank you! Thank you! Ganesh is simply amazing. I got
+                        more than I could have ever asked for. Again, thank you!"</p>
                 </div>
 
                 <!-- Testimonial 5 — Fiverr style -->
@@ -216,7 +280,9 @@
                         <span class="stars">★★★★★</span>
                         <span class="rating-num">5</span>
                     </div>
-                    <p class="testimonial-card__quote">"Ganesh was excellent — He really listened to my needs and worked with my requirements. Content was delivered speedily and with great quality! Will definitely use him again and have already recommended him to my colleagues."</p>
+                    <p class="testimonial-card__quote">"Ganesh was excellent — He really listened to my needs and worked
+                        with my requirements. Content was delivered speedily and with great quality! Will definitely use
+                        him again and have already recommended him to my colleagues."</p>
                 </div>
             </div>
         </div>
@@ -225,7 +291,7 @@
     <!-- ==================== CONTACT & PRICING ==================== -->
     <section class="section" id="contact">
         <div class="container">
-            <h2 class="section__title section__title--contact reveal">Contact: your.email@gmail.com</h2>
+            <h2 class="section__title section__title--contact reveal">Contact: ganeshbyte@gmail.com</h2>
 
             <a href="#" class="cta-link reveal reveal--delay-1">Book a 30m Discovery call</a>
 
@@ -264,17 +330,33 @@
 
             <!-- Social Links -->
             <div class="social-links reveal reveal--delay-1">
-                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="YouTube" title="YouTube">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="YouTube" title="YouTube">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
                 </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Instagram" title="Instagram">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/></svg>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="Instagram" title="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z" />
+                    </svg>
                 </a>
-                <a href="https://fiverr.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Fiverr" title="Fiverr">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092V16h-2.006v-3.025h-.85c-.545 0-.84.41-.84 1.092V16h-2.005V11.87h-.84c-.546 0-.84.41-.84 1.093V16H11.93v-4.13h-.84c-.545 0-.84.41-.84 1.093V16H8.244v-4.13c0-1.476.91-2.636 2.476-2.636h1.21v-.733c0-.869.504-1.467 1.327-1.467h.84V5h2.006v2.034h.852c.822 0 1.327.598 1.327 1.467v.733h1.209c1.566 0 2.476 1.16 2.476 2.636V16h-2.006v-3.025h-.002v-1.092zm-11.142 0H7.86V16H5.854v-4.117H4.847c-.546 0-.84.41-.84 1.093V16H2v-4.13c0-1.476.91-2.636 2.476-2.636h1.21v-.733c0-.869.504-1.467 1.327-1.467h.852V5h2.005v2.034h.852c.822 0 1.327.598 1.327 1.467v.733h1.21c.372 0 .72.082 1.03.226a2.914 2.914 0 0 0-1.03-.226h-.34z"/></svg>
+                <a href="https://fiverr.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="Fiverr" title="Fiverr">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.004 15.588a.995.995 0 1 0 .002-1.99.995.995 0 0 0-.002 1.99zm-.996-3.705h-.85c-.546 0-.84.41-.84 1.092V16h-2.006v-3.025h-.85c-.545 0-.84.41-.84 1.092V16h-2.005V11.87h-.84c-.546 0-.84.41-.84 1.093V16H11.93v-4.13h-.84c-.545 0-.84.41-.84 1.093V16H8.244v-4.13c0-1.476.91-2.636 2.476-2.636h1.21v-.733c0-.869.504-1.467 1.327-1.467h.84V5h2.006v2.034h.852c.822 0 1.327.598 1.327 1.467v.733h1.209c1.566 0 2.476 1.16 2.476 2.636V16h-2.006v-3.025h-.002v-1.092zm-11.142 0H7.86V16H5.854v-4.117H4.847c-.546 0-.84.41-.84 1.093V16H2v-4.13c0-1.476.91-2.636 2.476-2.636h1.21v-.733c0-.869.504-1.467 1.327-1.467h.852V5h2.005v2.034h.852c.822 0 1.327.598 1.327 1.467v.733h1.21c.372 0 .72.082 1.03.226a2.914 2.914 0 0 0-1.03-.226h-.34z" />
+                    </svg>
                 </a>
-                <a href="https://upwork.com" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Upwork" title="Upwork">
-                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+                <a href="https://upwork.com" target="_blank" rel="noopener noreferrer" class="social-link"
+                    aria-label="Upwork" title="Upwork">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z" />
+                    </svg>
                 </a>
             </div>
 
@@ -284,11 +366,13 @@
 
     <!-- Back to Top Button -->
     <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Back to top">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+            stroke-linejoin="round">
             <polyline points="18 15 12 9 6 15"></polyline>
         </svg>
     </button>
 
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -553,7 +553,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const parent = entry.target.parentElement;
                 const siblings = Array.from(parent.children);
                 const childIndex = siblings.indexOf(entry.target);
-                const delay = childIndex * 100; // 100ms stagger per card
+                const delay = childIndex * 120 + 50; // Elegant stagger per card
 
                 setTimeout(() => {
                     entry.target.style.opacity = '1';
@@ -571,7 +571,52 @@ document.addEventListener('DOMContentLoaded', () => {
 
     cardElements.forEach((card) => {
         card.style.opacity = '0';
-        card.style.transform = 'translateY(24px) scale(0.96)';
+        card.style.transform = 'translateY(30px) scale(0.95)';
         cardObserver.observe(card);
     });
+
+    // =============================================
+    // 9. DYNAMIC COMMENT FORM LOGIC
+    // =============================================
+    const commentForm = document.getElementById('comment-form');
+    const commentInput = document.getElementById('comment-input');
+    const commentsContainer = document.getElementById('comments-container');
+
+    if (commentForm && commentInput && commentsContainer) {
+        commentForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const text = commentInput.value.trim();
+            if (!text) return;
+
+            // Create comment element
+            const commentEl = document.createElement('div');
+            commentEl.className = 'ui-post-box__comment';
+
+            // Escape HTML to prevent injection
+            const safeText = text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+
+            commentEl.innerHTML = `
+                <div class="ui-post-box__reply-avatar ui-post-box__reply-avatar--generic">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/></svg>
+                </div>
+                <div class="ui-post-box__comment-info">
+                    <div class="ui-post-box__comment-name">
+                        Guest User
+                        <span class="ui-post-box__comment-time">• Just now</span>
+                    </div>
+                    <div class="ui-post-box__comment-text">${safeText}</div>
+                </div>
+            `;
+
+            // Append at the top
+            commentsContainer.prepend(commentEl);
+
+            // Clear input and show feedback
+            commentInput.value = '';
+            commentInput.placeholder = 'Comment posted! Add another...';
+            setTimeout(() => {
+                commentInput.placeholder = 'Search, submit a form, or post a comment...';
+            }, 3000);
+        });
+    }
 });
